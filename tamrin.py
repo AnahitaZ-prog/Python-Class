@@ -1,20 +1,15 @@
 class Cat:
-    name = ""
-    age = 0
-    color = ""
+    def __init__(self,name,age,color):
+        self.name = name
+        self.age = age
+        self.color = color
 
     def hello(self):
-        print("Mio Mio")
+        print('hello my name is {}.'.format(self.name))
+# Ralf = Cat("Ralf",2,"black")
+# print(Ralf.color)
 
-Ralf = Cat()
-Ralf.name = "Ralf"
-Ralf.age = 3
-Ralf.color = "Gray"
-
-Mirza = Cat()
-Mirza.name = "Mirza"
-Mirza.age = 5
-Mirza.color = "White"
-
-print(Ralf.name)
-Mirza.hello()        
+rex = Cat("rex",2,"gray")
+Ralf = Cat("Ralf",2,"black")
+rex.name = "ralf"
+rex.hello()
