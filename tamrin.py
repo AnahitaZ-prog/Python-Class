@@ -1,16 +1,11 @@
-class Number:
-    def __init__(self,value):
-        self.value = value
+class Jentelman:
+    def __init__(self,name,age,salary):
+        self.name = name
+        self.age = age
+        self.__salary = salary
 
-    def __str__(self):
-        return str(self.value)
+    def show_info(self):
+        return self.__salary
 
-    def __add__(self,other):
-        return self.value + other.value + 1
-
-
-n1 = Number(2)
-n2 = Number(2)
-
-print(n1 +n2)
-
+info = Jentelman("d",2,25)
+print(info.show_info())
