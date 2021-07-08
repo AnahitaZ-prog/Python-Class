@@ -1,15 +1,15 @@
-class Cat:
-    def __init__(self,name,age,color):
+class A:
+    def __init__(self,name):
         self.name = name
-        self.age = age
-        self.color = color
 
-    def hello(self):
-        print('hello my name is {}.'.format(self.name))
-# Ralf = Cat("Ralf",2,"black")
-# print(Ralf.color)
+class B(A):
+    def __init__(self,name):
+        super().__init__(name)
 
-rex = Cat("rex",2,"gray")
-Ralf = Cat("Ralf",2,"black")
-rex.name = "ralf"
-rex.hello()
+class C(B):
+    def __init__(self,name):
+        super().__init__(name)
+
+child = C("Anahita")
+print(child.name)
+
